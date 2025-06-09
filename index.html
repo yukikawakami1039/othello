@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>リバーシ（オセロ）</title>
+  <!-- ※改善: style.cssが同じフォルダにあることを確認 -->
+  <link rel="stylesheet" href="style.css" />
+  <!-- ※改善: defer属性をつけて、HTML読み込み後にscript.jsを実行 -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <h1>リバーシ（オセロ）</h1>
+
+  <!-- ※改善: 横幅を自動で中央揃えするラッパーを追加 -->
+  <div id="board-container">
+    <div id="board" class="board"></div>
+  </div>
+
+  <div id="status" class="status"></div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* 全体リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    text-align: center;
+  }
+  
+  /* ※改善: 8×8盤面の幅を計算し、中央に寄せる */
+  #board-container {
+    width: calc(8 * 50px + 7 * 2px); /* 8マス × 50px + 7マス間の2px */
+    margin: 20px auto;               /* 上下20px、左右自動で中央揃え */
+  }
+  
+  .board {
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px;            /* マス間のすき間 */
+  }
+  
+  .cell {
+    background-color: #0a5100;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .piece.black { background-color: black; }
+  .piece.white { background-color: white; }
+  
+  .status {
+    margin: 10px;
+    font-weight: bold;
+  }
+  
